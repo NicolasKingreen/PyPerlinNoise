@@ -32,7 +32,6 @@ class Application:
 
     def run(self):
         self.is_running = True
-        self.draw()
         while self.is_running:
 
             frame_time_ms = self.clock.tick(TARGET_FPS)
@@ -45,6 +44,7 @@ class Application:
                         self.terminate()
 
             self.update()
+            self.draw()
 
         pygame.quit()
         sys.exit()
